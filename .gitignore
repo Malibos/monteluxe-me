@@ -1,0 +1,15 @@
+node_modules
+dist
+.output
+.vinxi
+.data
+*.log
+.DS_Store
+.env
+.env.local
+artifacts
+attachments
+screenshots
+public/__grok
+monteluxe-kod
+*.zip
