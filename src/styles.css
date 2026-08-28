@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+
+  --color-ink: #f4f1ea;
+  --color-muted: #d1d5db;
+  --color-glass: rgb(255 255 255 / 0.1);
+  --color-glass-border: rgb(255 255 255 / 0.2);
+  --color-accent: #22d3ee;
+  --color-phone: #171717;
+  --color-night: #020617;
+  --color-indigo-night: #1e1b4b;
+
+  --radius-phone: 3rem;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: #000;
+  }
+
+  body {
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@media (min-width: 640px) {
+  .device-phone {
+    transform: scale(min(1, (100dvh - 24px) / 852px));
+    transform-origin: center center;
+  }
+}
+
+.phone-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.phone-scroll::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.glass {
+  background: rgb(255 255 255 / 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgb(255 255 255 / 0.2);
+}
+
+.btn-cyan {
+  background: #22d3ee;
+  color: #0b1220;
+}
+
+.btn-cyan:active {
+  transform: scale(0.98);
+}
