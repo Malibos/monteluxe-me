@@ -16,6 +16,7 @@
     "@electric-sql/pglite": "^0.5.4",
     "better-auth": "~1.6.30",
     "kysely": "^0.28.5",
+    "pg": "^8.16.3",
     "@tailwindcss/vite": "^4.3.0",
     "@tanstack/react-query": "^5.101.0",
     "@tanstack/react-router": "^1.170.0",
